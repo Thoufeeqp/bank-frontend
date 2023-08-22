@@ -1,0 +1,183 @@
+<nav class="navbar
+ navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand text-primary fw-bolder" href="#"><i class="fa-solid fa-building-columns "></i>Service Bank</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+       
+        <li class="nav-item">
+            <button (click)="logout()" class="btn text-primary fw-bolder " type="button"><i class="fa-solid fa-right-from-bracket"></i> Log out</button>
+          </li>
+          <li class="nav-item">
+           <a data-bs-toggle="offcanvas" href="#offcanvasExample3" class="btn text-success fw-bolder" type="button"><i class="fa-solid fa-trash"></i></a>
+          </li>
+        
+       
+          </ul>
+        
+       
+     
+     
+    </div>
+  </div>
+</nav>
+
+<marquee bgcolor="bisque"  behavior="" direction="">Important: Deposit interest are raised upto 7.4%, hurry up save more... enjoy more!!!</marquee>
+
+<div class="row d-flex">
+<div class="col-4 ms-4 mt-4">
+    <h2>Welcome 
+        <span class="text-primary fw-bolder">{{user}}</span>
+      </h2>
+      <p style="text-align: justify; " class="mt-2">There are many variations of passages  Lordolor sit amet..", comes from a line in section 1.10.32. of Lorem Ipsum available, but the majority have suffered al pre   Lordolor sit amet..", comes from a line in section 1.10.32. of Lorem Ipsum available, but the majority have suffered al predefined chunks as necessary
+        
+      </p>
+      <div class="collapse" id="collapseExample">
+        <p style="text-align: justify; ">but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model</p>
+      </div>
+      <button  (click)="collapse()" data-bs-toggle="collapse" data-bs-target="#collapseExample" class="btn btn-primary">Read <span *ngIf="iscollapse">More</span> <span *ngIf="!iscollapse">Less</span> </button>  
+
+   
+</div>
+<div class="col-7 text-center">
+    <img width="50%" height="" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2ZUXQCbKDba7Dr46HGPNA1v2nHhrBhW3CYltWosF0RoEQDjbq9I4J8X-y_WgEdoY1h88&usqp=CAU" alt="">
+</div>
+</div>
+<div class="row text-center mt-4">
+  <h1 class="text-primary fw-bolder">  OUR SERVICES <i class="fa-regular fa-handshake fa-beat-fade"></i></h1>
+</div>
+<div class="row m-5">
+    <div (click)="getbalance()" class="col-4 d-flex justify-content-center text-center "  data-bs-toggle="offcanvas" href="#offcanvasExample">
+        <div  class="card btn p-3" style="width: 14rem;  height: 18rem;">
+            <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQg6vcsBMC7EuWUPrt_CjrDc5xkl5N5YtDcQg&usqp=CAU" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-text text-primary">Balance Enquiry</h5>
+            </div>
+          </div>
+    </div>
+    <div  data-bs-toggle="offcanvas" href="#offcanvasExample2"  class="col-4  d-flex justify-content-center text-center  " >
+        <div  class="card btn p-3 text-center" style="width: 14rem; height: 18rem;">
+            <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdxiHvYnhAcRDBOPchzof8fvO-MoxBLLNvjg&usqp=CAU" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-text text-primary">Fund Transfer</h5>
+            </div>
+          </div>
+    </div>
+    <div routerLink="/servicebank/statement"  class="col-4  d-flex justify-content-center text-center" >
+        <div class="card btn p-3" style="width: 14rem; height: 18rem;">
+            <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlM5DaKpChBnoXIMyJh8z4c1TM-inrKZ_q_w&usqp=CAU" alt="Card image cap">
+            <div class="card-body">
+              <h5  class="card-text text-primary">Mini Statement</h5>
+            </div>
+          </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-6"></div>
+    <div class="col-1"></div>
+    <div class="col-4 border rounded p-3">
+        <h3 class="text-primary ">More Updates!! Please subscribe...</h3>
+        <form class="mt-3">
+            <div class="form-group " style="width: 75%;">
+              <label for="exampleInputEmail1">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            
+            
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+    </div>
+</div>
+
+<footer style="width: 100%; height: 50px; ">
+    <p class="text-center text-black p-5 ">&copy;All rights reserved &reg; <span><i class="fa-solid fa-building-columns "></i></span> Service Bank</p></footer>
+    
+    <div *ngIf="showoffcanvas" class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title text-center" id="offcanvasExampleLabel">Balance Enquiry</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <div class="text-center">
+            <img src="data:image/png;base64,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" alt="">
+             <div class="mt-5">
+                <h4>hello <span class="text-primary">{{user}}</span>,</h4>
+               <p> Your current balance is: <span class="fw-bolder text-danger">{{balance}}</span></p>
+             </div>
+          </div>
+          
+        </div>
+      </div>
+
+      <div *ngIf="showoffcanvas" class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample2" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title text-center" id="offcanvasExampleLabel">Fund Transfer</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <form [formGroup]="transferform" action="">
+          <div class="text-center">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASsAAACpCAMAAABEdevhAAACFlBMVEX///8ATpb/ugD6phoWzLMAmf9hfsQkOskDAAAcRor/vADp9f82qf953MzS9e8AnP8AQ5EAN4wAzbEAfdgAZrYRrqwDXpkYLEgAk/8AT5QAS5UXRLGyxtwGaZwAXqy43/+9wuMPuaEAPo+97uYAVpzf6PFOaKZgiLaQqMjK2umltM/6oQADjesIEif++/UV1LElJssmL8XLdgPe4ff+9ugBBhTmmgHupAHfiwz1rQH6qiXP0+36rzX0oBfrlhNYd8HRfgN60hql0P/8rRP92ayn5tv+7M/7wGr94bv7t00eVNYVwrTEyvTGxeFCqLwGPYbQ7rTu+eOutNz8z5P/xjn/14L/0mT/y1P/5az/9Nr8yH1Ss/+YmZyNy//baQDXWQCZuei/v78AGTwAADAaO28AIEDe88tzjcv+1Yv91Z7/13X7vm37t1f/6rv/4qP/7cfUtkfBoWhcypS5sWI9mubOwEOWq5jI5f9oo8qOxW2ZuXHdpDyzsG93v//ovhhO1sNGpdy0ulUTcObImk1DPrdXS6zAh1sRfO2SeH/Wk02keXWAZpCTb4VtYJ8LQbTTpywTXcaehWOwhlKij1B8dWhKZ3pvcl9lZmiJiY1NT1bd1bdOeq47PkchJTFnbYKWmauirO2Om/CMzNvpq4fIi37ys3aAsPBZWFZDirA0MzPT09IAKogYNF5BVIIwQlx5jbUMi6NyfJLP7vHiAAAXnElEQVR4nO2djWMTx5XA5ZUEYgW2LILiKG6RBfKXjMGyrd218FqJbGOHOCTYBGwMgeul4OCUtpc72stR+kF77X3k2rQ5oC6hl/RI46b4+h/ezOzXfO6u5F1bFnltwFij3dnfvvfmzZs3u5HI1/K1fC3PtYzNjvltOrs2XytGF323bzGZXS8CmV/zcf1roGE0Gq3VavPT4Xes2WT5pqRJWg0AKBbPeNCaNkBJsixJ4P/v70wPm0XG3pYkSdPg1dcgrZVhl7anESlZK0PRdU266NK65eS2JJXVsqKAa9dkDepWdFbUdjYKUYEvlAFZIJJSlpaeH1jLkqZqyKBkWSlrUhTSmuO3nYWkopKiwPZIgIJJF3a2w7soS5ou2SIDDDUhrLEo8lRA/bBvaGV5eaf7vEtySSpLEnnpCBbHDIdPI60i2kO82ts73+1dkSVFI68dsICwJlgvdKbIQQW/ID8fgdYy59oV6LOKZ+imcxCVxqCV5LJ2eze6vuNyU1Owqzb+0gxYlMtCFljTFNurW81B++fDu7/t6IlsqZisICs8TVrhNGmBcrlUttk+Hw7rYtkhVSpZ3AzFWsMbmmplk9Vk1YalXNyt7u+oLFmsAKmqY1WaRivWnKFWVgu1pCglC9Zzw0o2zK5UBZeuapaBMR4LDoKWWsFIVC2pVb1Ufp5YWTaogelN1TFCDU6k8aFwbALzVnoZxPgAlmw6u+fNXwFFKZXsQU5CijXhxE1mwCAbOlhSyypQRLP58zIOvmeFDBpwPqpuBwSKRgbvi44JyqqqqVVVkeyvKmx8NbwonH/vWbmExQyyartu0wgX7Xa3ilCtjM+APskyNiVUNGZCODZRJIfRVpBlJwoAtuXYoAQVq3jLbrduj4KgGRm6y+Ul+qjIu+11WGt00nd4ydalcknFCMAQy3Huw/MoFyMbJigTrCTGXSFU4szO3pD1IjPNsx2WVHXiKytqWLdaYawkXPsMc6VM0ESFm/Dek/UiYVdIbCOEIZaTmJJJvUJfRc6cMUGpTEVXNqrTezhhinIq0eIK+VtsllO1Zy0mK4frraKpV7JSpdWKXJ5oCVTD1kWQsN7HsizQZcmODWIt14q2bye1SqI8e0ugMuNJ1o8sORksZIcmAolwzmNFbpoPBmJEcNUiqMy0CgPrtpOTkmRNNX09SjVg+c55aINsno+K2VsGFQaLCH3eU7DFBisnpWlkahQoJZbos51VmVjxaiFUhtthYA3LZVphZJh0J9cngGLJjBGWJTxeaClUGCw8KGWT7jCNTIVis8UoUCNcseDaII6zxVAZk2AG1m1yzc9Qqyi1OjNdrMllzAplpSy3NCoMFj4DmZXhqruDSpOK7Arh3ASCZSQHgVIpxFoXmC63GioBrDF47Ubti6zpABW3AGRakzS1DPy+VgatqRGwBVFFIis8WJELEgSgKGUVOC9hYdFN6MtAO026SMwCWxQVBosws7ELMFSAMdRFlwKF4UsXZHnpvUskzJZFJYIF5jsX3nvvwvv1X24LunVHbglgNSYtjcrKOQQDq8VRObCi2y6eai1UY7OzbD32ugVrmwVBrm59eE9VG41No2JsVI9NqtB8ILCEqJa/c9GIWi/slYqjFaMW3bic4gSRX7BgTWwDlgjVJRmFa2UYs0pLe0K7Voo1zVzsMy4pisWfw6fN62wcln0IEtV34CxAk+1SZWkPqNYKLDAGsTisXddMWusOGMGV1iFmXpo8wPKSpmjOYqssgTlT08MCgbgCpyNgWgIEVfpDS3TChO3DQnlp8uuXpDKVE4Rz8SYfI29C9Td7beQFJDodM2y5m/ltwCJRXahx0vKqNL+tSwlbbsOaffzuSsAyahQsOzhqOCadJTm/rTCJZrSCoa0Ij9AEskRmMc1EpkZlGAxYjesVJTgq/OxlqdjEe8JmeUtUUlnTKDUaCxLVBRyVUnIqH+ASWvO6rJuMWpnWIFEx1VhwqC7hy2ewVNmGVZYDmqeHIhfx1bwq4TqiZH3jcFD1LGO4KuslRSvZsCCr5q0xwjePVB1WNqwQ7rJTLA8JqSX0P9sG2Z0YuydHLx/swOS7drGQrJYUqerUpKFFmuL3OjoOvpoM7OzHDsW+b1s9WsKQ9VJV0pxl7OJ3Y4Tcm2kP7Oz1ydF4V5yQf1DsAuxSCRavO2KU+n8Qj3d13Q3m7O2xdCz2j7ZaKaWSrimwCtwM39EyNsUqFksfCubsdcqrFKl4/J9qmtVxFXQbq9kDVggVaxW26rocxNmPwSs/ae8UkNUqvD+qVFYwVS7+hGYVS98L4ux1yh0GVfwHZhmepOhg9C4T1XioCOZ7qFnXle2fvR1d+A9rTokg1CfZ2d1knPCfGVax2C5oVgeDKt5hVx/IqB5bxVeMocf60PhS1/Z91j102bgJ0tW3yEN+n8MqfSyAq69LjrJqFY//i913TZXJilgNVhkrHxistu2y2tPoqn+EmSAV2Rk7C9IcVrEdt8K7QI0Y+bGEB6NV/B+oak/5ALaKxw9u9+wzANTJkydl+wxVKgo2dvf85CQrAF8Q11+PHIzHf7p/hJJTP8Pq/MslDSvgR0YxeR80eq0r3rFdIzwUS7/x2qn79q2hTNAYSqLFn59i5LUj6dhOBw4H410j+xl5GQujdRg2qGWLHuy+fh+0GflpR3z7rGIfjcCzmaWmepVAZW5z/cUptocjr53cBVb/ymF16pcStuNWK6sg4DFvOWT1K9TotQD0Kn0WnP2+Zt8ZfMiFuQ2U9bnPdhDI2XRzsNp/6mc1vLoRmKCmyZZZFP9tJFBWIx+yJZIOqtq/8zrYRKz27+dse7f8Ve3nwenVEcjqlzKb2JAVxUDFs8DmYjXykaRonMwMcC21/xgJlhUwQjoLJEvmM1eEqJqI1f6R+xonpwtMUP6F+YXgWI38p6yU8S09cI2iZqDi926XWB1+mS8fvfxfnLWCsvyh1eDXAYyD6SMfoXP9RtZ0RTZFK4PzIq9e+/gjQe9e/nVsN1i9JJC2/G/tIk/rhuuSlGkzP38hEFYpdKzUbyEiHT0aCxbrGiu4xd/lhZ3L7EbMcLhNKPlPfmTVgqLRED7C6UHK+jQgVsbBUh9rkqlWJqho7cO/pkQ9a8tm/Maihc3CNntpickqm+JKvvO/UTEsHBJhsaekfdKJPgiWVRae6eMiepCfXUFRftCZ5/cqla2D1WriROKBv95cf/jo0abL5war/Fa3UH5/EWEqwx0SN83f9WezAbLK9w3Cgy7axSbgh/Xfi3vUfzzrj9XD8cTDxIkTJxJuBEx5kDDEpSlilRpwP87tSxcuLl28ie32S2aygbFKdVv/nFucnwCyvuhVw7CR9cFqMzF+wpDx6549GU+MI0m4NIWsnM76l0JbNiBWqf4GvuhDr1YTJyzx1qtVE9V4wqURYJVN1dtTKBtBsco24nr7U16sHmKoHnke7w+QFTTBxy6NIKvj9fYUSl9QrF4KhdVm4tNnJqrHq97H+0MiMf74yZMnDzx8+y6zOh4Kq9UTlSemuxr3cbyHiUeJyujoqOsFtSyrTysVywR9nGAzsfAEoBp1berCanh5bnp6TlSYHTor4+yCcglPVtefVCqDz8aharm5a1seLYw2zGp57XTRqkKe5hWFhspqbHrePjv3mdTevn2hUqk8GXzyGMDy1RWEqhEbHDtTLOqqquroD+5zjkNkNbxCnv0WS8ubVQXK4OizE24REyaNsgJ9VdVJq2B7UlU5jw4Kj9Uae3bmkSnerEYRLOCzHvrryusV6Ntdm3BYDc+DvkYJAXeXLlUJjdV6Ua1OEmfXdabMy5tVAaHK+R04kq8DcUfFYTU8UVTJvqK7W6RKXMNiBW6Uzjk79TBcb1bACHOv/zHntyevN8QKdJbuq9FdssQ1JFZnODcKKnZxnfiiD1aRyv/8MZfz2ZF7Zz8DrDwuh2G1wkWFYBElruGwWuOjgrCIW+WH1ej5XM6nDR5Kx9Kxzz4bcL8emtWcABXyGvh4FAqrsaLORwVvFV5O6IdVAaDKVXz1wygmSXsckmY1P8l4C/6tDYXVLeGdiuqTuMP0ZnXnaCWHYF3xLkGccYpv3I5JsZrFOjupW2L9G1esMFiNiVHBW4UplherK11dHywgVgtdXV1e60149Q3z4Z071k8UqzNFW61gHYMhk3ZvsSgrDFaLGCu9VDXE6pCOqzWH1djnV39l/Xy3Kx7PGXINVj+5lyAew0uWmBK4ux1WTR7FaoL0F2qppNec7utYkBUGq3Xs7CBkr5ZKqvObSf2080UOq8/fuVoy9R7WKj411eqyd1UdWQJHaevRy/aXSVa4CUZ1MMmolqpYDK3WHCMMgdUwYYKTk5PVkjqJ0cOMkMNq7p2rV81ye1h2mFsAkrv21Kiqe9WlEzNkJRylWHcP2hV5JCt8FFQNIwCwsN6GymoZd5bI+oFmVf2yivzp6tX/RT8YtYodeHWnW1UdXTRIfAjUyu4fyWqNGgVragm/1TrW2xBYzRWxswO1Aj6LPLuzS4PDqvL6n96pmtfESJe4D/foOlTi08Jdp9CTZLVCsdKx24p664SjIbBaK5JnBzaIe0990plCc1jlcqXP0a1Mckpgu+5EBNJOqxXusNp7erD4VMhq0vCtJLqdY6XD05NzaL3owSpn/MArFxbXl9NqFYvN2J/N9PT0YBW8QhvUYeUjFUSrmBWEbINV9uz4neKwKlisrvBKq0UOywpDexxWPXbvAKoe7CRi314tMRF8yL6dCIRJ66fvFM+3WwmYCqdkX+iwYhxWhiq1Q1I9+KjoEjOwsFRs02PYMYPOwFKxh7Jw43ZzpryQe0pgGnJxWIcsPhirWA+0whmEqgdvTMWip7FoEAzblKffyVg0qlLOclJ1j0WRFcIMFAhA8ZFwaEgcYVmOvYdkBQzvkIFqBm9NsbqFD0U65VxDn+OsEcEoBUv1mONEoBVCnwX+6GBYxbl7PO7ZqEhWlpBbM1zmzigcJW7sDs+dSSfgZ+6MEgvgP8IEDVgdnNO3Y2y4rMjm7jkZAtYO5GTIRONkFdNrdRLPjIryDOaEmURlKBbv9AjNISEr6gQ0q1ky2zbpzMd2KNcnSJ8BpcZXdUWskk5uAWP19OnTa7ykHyJzLyJiRW8kqyeHTGwEDyeHPC3IIYOzE+tewvwVgvWUYnVtIcfLvLebYTqFKiZAxVmbOCNamyAX6UJam1gRrU2QLyVwyfVVcgtXKFZ3c1xWRt4qImDFHp2z5jXP6a6u0guEYa158RZydGbFzS0vmoQb/QhWKEXK9hW5qxmWVWTm7NkZzoF5684gcKBDG51Z+g1tLXWRPntUpdfbvHLIBylWQ6M5I/Qi5Z5hghEKlXBfIneNnl0ljzIPrQhvjX6OOnu1yD5Qxp1VB83qKNcIDc/OsEozDU3h137Y1ReqUX3BeQVLmHUyi56VJ+6sumhWr1Z4rNKGCbZvj1Uksrw4YVX1nOZW9YRbU+RUNE0s1l1TRCawIKvLEY4Rtpsm2E6ZYN2sYIfnYLXYbcET+cKuVTPOPic4e52shiKcZVU0DMK/SVQNsXKXJq6BpB45AVndSbJGCNck4HB3LPY1KxzWUTivpk7UHkujfHE7xaq+cdCP7CFWANZdOFWkjNAq42tPp59fVtTixOGO+NAHKGFDNrPL+PqOpAlcopO2IqsITqrjMOgnSiFTofsXlVFT0aam9r1xBJbJmCI6bEuyuuMspHbEDxyADykBvx21jPD69U34RyS5+QWM3JJT+/ZNTU1tvAHlB3/eGBQdtjX346y+MIQe9hIfOnzgwIG2F76JdmeZRvilsfnti9Xrm2hjYQGwgjKFpLd3QXRUuM8r77EljifJ44Ht82pgl1kk477Pa/XvHj9+8asDtpxDulLIQQwPE7h8+WB10GRlSG+vsLwNsspm6u/sViqo/YONuIDBvBerF4FgrIx9d2go/DJByzMCVa9Qc9Bey2ymTs0q9KWC25eaPV6nZhX68x77B6/TrLbQr5Pnc5EIgyqR6MVZif2nsYc3m++sS/LZIPc71332lNd+ZwGrCIwSOKz+iquVWM1d99G7S6D76OsVd1aFb3FtEMqmq14BVr2erFL5OgRuZA+fVTaVymYbYxURs7rOYUWg8mKVzfZ3D/iXwUwqbFbZfHajf7Av0yn63J0VRPXi31PjYCCsUhv1XmR/gL6dS2rDHG2Sg1l+C3dWnwhZPWRRjROsxCx2P2bggEgdx8flrc76WT18l2TljLRfsKxeJNRqS3hQbixayHZudP8ln+rOFyIb3RudnRlmHA0uFuWg6iNbdXPaeLBCA6ETjJ5zrpANr5xhELESPwKBO8cZBDY7AJRtIJ+BrPoj/azmBTbH4WBg+pOvl9Xmt0SsXEIGhKpXOB3kz50Lx/8yOJDv7B/Y6Nvqg6wKKYZKYHNnVmfYYLCPaeX1LAtyIMw7HeXoVS/BKic8JrJB9pIHUt0ZpFuZFGTVzQZooekV7zkghbpZPSNYdTofcOIrgtWUeLcT9xkp/W2ZvoHOTAbwSua7N9oyncwcqPBSWKzIvMObb6K/tuhAy4sVcu5OgIX3fPUBpVsEqinxhks0Dmbpax4YiCRBHJUEiArJwgBntrgR3LN3KAjEmP3mK68gWIx792KFnLs9ELIx0+b11YePOGq1b0qcIjLmzsfrnDsnN0KLr7L4IAhQvfIW/KFAe3cvVmiWY7E6J4wDenvJQXDfvinxNVlz5+Nbg76lPxPs3Jnnrr4N1clGFYnUywpF7tZAeE40tp3HUlcWK/EhrflgVvBkNdFzzcJjha7r29D2MFQRxqt5PqcIc1jnREkfFpUfVg1ISKyQvQBWr/wQQ1W/XiGHZbES+KAcxQr9ID5k07Ey/RWEhaEaqJsVirDYkIGQfaxa7bshPmLzsTpuHPQtHBWaq9fJ6tN3bef+Er9FwVGrG7Za7SVWdrT3FoYqkqk3vjKM8CvXYdAxwanRPhPV1HnxEZuPFS/r0c1MCH0829A2QhGrG45aRbb2JCvOJKfQxuRHfbByjDDPb+CoVQWwMn/MiQ/YhKzYORdjgb5YYUbIja9GHXcFHOIeZWXGWJYkM/Xnr6AUnJGQmxe2A1E4XbZ8l8vUuTlZteX7nCN3cxco/Dy31skjc4OGG5haRSoWK5dnFTUnq7ZsagttNC4MZtg8n19W0GF9Ref6HMHVyilqcKmuaFJWcIqaR8umglUvP6xW7dCd57Ds6ApFVEmLlcslNS0rD/HDypnm8KIGyuqsf7kcr5VZOXmZc33sp5Y3NwP1G35YDe0qq7ONsvqGj2eSOzkszqLfNdJBXZuy/bxIDsbjDaLKDsWDeO8SJ3byI6k3fLB6185hcYKGfWScbqqZy3QQsOo43EhvswdgGWYA7/M6AqsW6pY8UCtvVs/cWE2RNlfxwyreMfTCN+uWF4ZgRWYAepU++3/fqFv+fATWDfti9aLABo1hcMoueBz1xYr3Vj0fEg+GVQwrAK5DYr5YWblRjm832Ti/8MmKL12miFsEw6ph8WS19emzZ397KX+gd4uduSD/hM9obnilGcSsug6+asplMa3wWNnF+dxXWvpkdR7IKHxoGGejJZoN3qB/0RAr/P2eR3eBlcNhxkcbgUBW6MmZOXaOc4MO0pFzd0sziPUKP8xlQZsA3mvpA4OvRlyBrNDDQHLsZ3+bosAkaaNkRISBeAbSXUGj8FjhjY6JzNAPq4XIAEDFWtYqLI8hf+WVkuE/LCpOPTlRpHzbfhu20L7a/TTyPDxgNYBYsQQS4+MJ6p0dMHJ3SzPwXoXNcGDfLG7ydHu6oj8RYcAeO8Vs7+O04UsBmiB61C9L4MsEwwo6LLc0AzBCEayOg5cN6RC28AnERcTOfcYUcQvPgw9AtYK7JXiDG8sq2dvb+8z1gEneU8h8ifh5gXUI+7g8n5LmPW2CkEIldx4pFDfVeT3BvBLtcYL9HSlJod54oDrql4er3HMJoLaFCr1EwSUjDMBQigXf6QV+6fpCqytdDcjl7b+M3pAZt3BTACp9z2MMTBqk3Dz1JgBDvpHqAXqpF2Doukvvzp2j9UkQ5mdL+7E6xfvFg8KX3fw/ML9kza+Ew1IAAAAASUVORK5CYII=" alt="">
+             <div class="mt-5">
+              <div class="mt-3">
+              <input name="creditacno" formControlName="creditacno"  type="text" class="form-control" id="inputacno" placeholder="Credit Account">
+              
+            </div>
+            <div *ngIf="    this.transferform.get('creditacno')?.errors &&    this.transferform.get('creditacno')?.touched
+
+                " class="mt-2 text-danger">
+                    Invalid Acno
+                </div>
+            <div class="mt-3">
+              <input  name="creditamount" formControlName="creditamount"  type="text" class="form-control" id="inputamount" placeholder="Credit Amount">
+              
+            </div>
+            <div *ngIf="this.transferform.get('creditamount')?.errors &&    this.transferform.get('creditamount')?.touched
+
+                " class="mt-2 text-danger">
+                    Invalid Amount
+                </div>
+            <div class="mt-3 mb-3">
+              <input  name="password" formControlName="password"  type="text" class="form-control" id="inputpassword" placeholder="Profile Password">
+              
+            </div>
+            <div *ngIf="    this.transferform.get('password')?.errors &&    this.transferform.get('password')?.touched
+
+                " class="mt-2 text-danger">
+                    Invalid Password
+                </div>
+            <div  class="d-flex text-center me-3">
+              <div class="me-2 ms-2"> <button data-bs-dismiss="offcanvas" (click)="transfer()" type="button" class="btn btn-primary">Transfer</button></div>
+             <div><button data-bs-dismiss="offcanvas" type="button" class="btn btn-danger">Cancel</button></div>
+              
+            </div>
+             </div>
+          </div>
+        </form>
+        
+        </div>
+      </div>
+
+      <div *ngIf="showoffcanvas" class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample3" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title text-center" id="offcanvasExampleLabel">Delete Confirmation</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <p class="fw-bolder">Are you sure want to delete this Account? </p>
+
+          <div class="row d-flex">
+            <div class="button">
+              <button data-bs-dismiss="offcanvas" type="button" class="btn btn-danger m-2">Cancel</button>
+            <button (click)="deleteaccount()" type="button" class="btn btn-success">Confirm</button>
+            </div>
+          </div>
+          
+        
+        </div>
+      </div>
+

@@ -1,0 +1,54 @@
+<nav class="navbar
+ navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a routerLink="/servicebank/dashboard" class="navbar-brand text-primary fw-bolder" href="#"><i class="fa-solid fa-building-columns "></i>Service Bank</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+   
+  </div>
+</nav>
+
+<div class="container p-3 border mt-5">
+  <div class="row">
+    <div class="col-3">
+      <h3 class="text-success">All Transactions</h3>
+    </div>
+    <div class="col-8">
+      <div class="d-flex align-items-center">
+        <label id="tType" for="">Search By:</label>
+        <input name="userinput" [(ngModel)]="userinput" id="tType" type="text" placeholder="Transaction Type" class="form-control ms-3" style="max-width: 30rem;">
+      </div>
+    </div>
+    <div class="col-1">
+      <input (click)="generatepdf()" type="button" value="Export" class="btn btn-success" >
+    </div>
+    <table class="table border mt-3 text-center">
+      <thead>
+        <tr  >
+          <th class="text-primary" scope="col ">No</th>
+          <th class="text-primary" scope="col">Transaction Type</th>
+          <th class="text-primary" scope="col">From Account</th>
+          <th class="text-primary" scope="col">To Account</th>
+          <th class="text-primary" scope="col">Amount</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let Transaction of statement | filter :userinput:'type';let i=index">
+          <th scope="row">{{i+1}}</th>
+          <td>{{Transaction.type}}</td>
+          <td>{{Transaction.from}}</td>
+          <td>{{Transaction.to}}</td>
+          <td>{{Transaction.debitamount}}</td>
+        </tr>
+        
+      </tbody>
+    </table>
+  </div>
+
+</div>
+
+
+
+     
+   
